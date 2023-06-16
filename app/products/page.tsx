@@ -6,7 +6,7 @@ import ListComponent from "@/components/ListComponent"
 import { Products } from "@/interface/Products"
 
 
-const Products = () => {
+const Prdcts = () => {
   const [products, setProducts] = useState<Products>()
   const [count, setCount] = useState(10)
   const DATA_URL = `https://dummyjson.com/products?limit=${count}`
@@ -25,11 +25,11 @@ const Products = () => {
   },[])
 
   return (
-    <div className="min-h-screen max-w-[800px] mx-auto py-2 px-4">
+    <div className="min-h-screen max-w-[1200px] mx-auto py-2 px-4">
       <div className="mb-1">Products</div>
       <ListComponent products={products!} loadMore={loadMore}/>
     </div>
   )
 }
 
-export default Products
+export default Prdcts
