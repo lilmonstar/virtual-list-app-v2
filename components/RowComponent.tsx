@@ -44,7 +44,7 @@ const RowComponent:React.FC<RowProps> = ({ index, style, products }) => {
         <p className='absolute text-xs right-[-10px] bottom-[-10px] text-gray-500'>{(num + 1)} / {imgLenght}</p>
       </div>
       <h1 className="truncate mt-4 text-2xl font-semibold">{products?.products[index].title}</h1>
-      <p className="text-xs">by {products?.products[index].brand}</p>
+      <p className="text-base">by {products?.products[index].brand}</p>
       <StarRating rating={products?.products[index].rating} />
       <p className="mt-2 text-xl">${products?.products[index].price}
         <span className='text-sm text-gray-400 line-through ml-2'>${(products?.products[index].price! + (products?.products[index].price! * products?.products[index].discountPercentage!/100)).toFixed(2)}</span>

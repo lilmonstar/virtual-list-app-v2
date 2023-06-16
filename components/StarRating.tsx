@@ -20,7 +20,7 @@ const StarRating: React.FC<StarRatingProps> = ({rating}) => {
     },[rating])
 
   return (
-    <div className='flex items-center mt-1'>{starRating}<span className='text-xs ml-1'>{rating}</span></div>
+    <div className='flex items-center mt-1 text-base'>{starRating}<span className='ml-1'>{rating}</span></div>
   )
 }
 
