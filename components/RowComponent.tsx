@@ -43,15 +43,15 @@ const RowComponent:React.FC<RowProps> = ({ index, style, products }) => {
         <AiOutlineRight size={20} onClick={()=>handleClick('r')} className="absolute top-[40%] right-[-30px] group-hover:text-gray-500"/>
         <p className='absolute text-xs right-[-10px] bottom-[-10px] text-gray-500'>{(num + 1)} / {imgLenght}</p>
       </div>
-      <p className="truncate mt-4">{products?.products[index].title}</p>
-      <p className="text-xs">brand: {products?.products[index].brand}</p>
+      <h1 className="truncate mt-4 text-2xl font-semibold">{products?.products[index].title}</h1>
+      <p className="text-xs">by {products?.products[index].brand}</p>
       <StarRating rating={products?.products[index].rating} />
-      <p className="mt-2">${products?.products[index].price}
-        <span className='text-xs text-gray-400 line-through ml-2'>${(products?.products[index].price! + (products?.products[index].price! * products?.products[index].discountPercentage!/100)).toFixed(2)}</span>
-        <span className='text-xs font-semibold text-black ml-2'>{products?.products[index].discountPercentage}% OFF</span>
+      <p className="mt-2 text-xl">${products?.products[index].price}
+        <span className='text-sm text-gray-400 line-through ml-2'>${(products?.products[index].price! + (products?.products[index].price! * products?.products[index].discountPercentage!/100)).toFixed(2)}</span>
+        <span className='text-lg font-semibold text-black ml-2'>{products?.products[index].discountPercentage}% OFF</span>
       </p>
-      <p className="text-md font-mono max-w-[80%] truncate">{products?.products[index].description}</p>
-      <div className="flex items-center gap-2 text-xs text-gray-400 mt-2">
+      <p className="text-lg font-mono max-w-[80%] truncate">{products?.products[index].description}</p>
+      <div className="flex items-center gap-2 text-base text-gray-400 mt-2">
         <p>Stocks: <span className='text-black'>{products?.products[index].stock}</span> </p>
         <p>Category: <span className='text-black'>{products?.products[index].category}</span></p>
       </div>
